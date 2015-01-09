@@ -49,7 +49,6 @@ public class GUIFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,14 +85,7 @@ public class GUIFrame extends javax.swing.JFrame {
 
         jLabel5.setText("Open");
 
-        jButton2.setText("jButton2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("jButton3");
+        jButton3.setText("Save");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -125,13 +117,12 @@ public class GUIFrame extends javax.swing.JFrame {
                                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addComponent(jLabel2)
-                            .addComponent(jLabel1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2))))
+                            .addComponent(jLabel1))))
                 .addContainerGap(94, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(116, 116, 116))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,10 +147,8 @@ public class GUIFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 381, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 424, Short.MAX_VALUE)
                 .addComponent(jButton3)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addContainerGap())
@@ -178,11 +167,6 @@ public class GUIFrame extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        DungeonGenerator.displayWindow.jPanel1.dungeon= DungeonGenerator.makeDungeonLabyrinth(Integer.valueOf(jTextField1.getText()),Integer.valueOf(jTextField2.getText()));
-        DungeonGenerator.displayWindow.jPanel1.paintImmediately(0, 0, Integer.valueOf(jTextField1.getText())*5+1, Integer.valueOf(jTextField1.getText())*5+1);
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -234,7 +218,6 @@ public class GUIFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
